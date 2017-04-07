@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Office of America - Launch Portal</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/add-user.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Chosen Multi Select -->
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/style.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/prism.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/chosen.css">
+    <script type="text/javascript" src="chosen_v1.6.2/chosen.jquery.js"></script>
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/prism.js"></script>
+
+</head>
+
+<body class="portal-pad portal-page">
+    <nav class="navbar navbar-inverse navbar-fixed-top menu-top">
+        <div class="container-fluid menu-margin">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar1" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="150" alt="Insurance Office of America">
+                </a>
+                <h4 class="company-title">Insurance Office of America</h4>
+                <h5>Launch Portal</h5>
+            </div>
+            <div id="navbar" role="navigation" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Chris Robertson <i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <div class="arrow-up"></div>
+                            <li><a href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content">
+        <div class="row sidebar-container">
+            <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
+                <ul class="nav nav-sidebar">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-desktop fa-2x" aria-hidden="true"></i><span>Applications</span>
+                        </a>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="users.html" onclick="location.href='users.html';"><i class="fa fa-users fa-2x" aria-hidden="true"></i><span> Users</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="add-user.html">Add New</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <ul class="nav nav-sidebar nav-sidebar2">
+                        <li class="dropdown">
+                            <hr>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><span> Chris Robertson</span>
+                     <i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit Profile</a>
+                                </li>
+                                <li><a href="../admin/help-request.html">Help</a>
+                                </li>
+                                <li><a href="#">Logout</a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- Body -->
+
+            <div class="body-container">
+
+                <div class="title-header spacerbottom20">
+                    <div class="head-drop">
+                        <div class="btn-group">
+                            Add User
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+
+                    <div class="panel-body">
+
+                        <form>
+                            <div class="row">
+                                <div class="form-group col-sm-6 col-md-6 col-lg-3">
+                                    <label class="required control-label" for="">First Name:</label>
+                                    <input id="" name="" class="form-control input-md" required="" type="text">
+                                </div>
+                                <div class="form-group col-sm-6 col-md-6 col-lg-3">
+                                    <label class="required control-label" for="">Last Name:</label>
+                                    <input id="" name="" class="form-control input-md" required="" type="text">
+                                </div>
+
+                                <div class="form-group col-sm-6 col-md-6 col-lg-3">
+                                    <label class="required control-label" for="">Email:</label>
+                                    <input id="" name="" class="form-control input-md" required="" type="text">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-6 col-md-6 col-lg-2">
+                                    <label class="required control-label" for="">Phone Number:</label>
+                                    <input id="" name="" class="form-control input-md" required="" type="text">
+                                </div>
+
+                                <div class="form-group col-sm-6 col-md-6 col-lg-2 spacer18">
+                                    <label class="control-label sr-only" for="">Extension:</label>
+                                    <input id="" name="" class="form-control input-md" placeholder="Extension" required="" type="text">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                                    <label class="required control-label">Assigned Application(s):</label>
+                                    <div class="row">
+                                        <div class="col-lg-12 add-user-checkbox">
+                                            <div class="checkbox">
+                                                <label for="">
+                                                    <input name="" id="" type="checkbox" value=""> CAMS
+                                                </label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <label for="">
+                                                    <input name="" id="" type="checkbox" value=""> Carrier Database Eagle
+                                                </label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <label for="">
+                                                    <input name="" id="" type="checkbox" value=""> Carrier Database IOA
+                                                </label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <label for="">
+                                                    <input name="" id="" type="checkbox" value=""> Carrier Database IOAANE
+                                                </label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <label for="">
+                                                    <input name="" id="" type="checkbox" value=""> LMS
+                                                </label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <label for="">
+                                                    <input name="" id="" type="checkbox" value=""> Operations
+                                                </label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <label for="">
+                                                    <input name="" id="" type="checkbox" value=""> People Services
+                                                </label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <label for="">
+                                                    <input name="" id="" type="checkbox" value=""> RiskScore
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr />
+                            <div class="col-lg-6 app-table">
+                                <div class="portal-tables">
+                                    <table class="table-hover table-striped table-condensed cf">
+                                        <thead class="cf">
+
+                                            <tr>
+                                                <th>Application(s)</th>
+                                                <th>System Role(s)</th>
+                                                <th>Role(s)</th>
+                                                <th class="action">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td data-title="Application(s)">CAMS</td>
+                                                <td data-title="System Role(s)">Admin, Manager</td>
+                                                <td data-title="Role(s)">Internal</td>
+                                                <td data-title="Action" class="actionBtn"><a data-toggle="modal" data-target="#cams" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-title="Application(s)">Carrier Database Eagle</td>
+                                                <td data-title="System Role(s)">Admin,User</td>
+                                                <td data-title="Role(s)">Internal</td>
+                                                <td data-title="Action" class="actionBtn"><a data-toggle="modal" data-target="#carrier-database" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Modal CAMS -->
+                        <div id="cams" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">CAMS User - Assign </h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="form-group multi-select">
+                                            <label class="required control-label" for="start-date">System Role(s):</label>
+                                            <select data-placeholder="System Role(s)" multiple class="chosen-select-width" tabindex="16">
+                                                <option>Admin</option>
+                                                <option>Manager</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group multi-select">
+                                            <label class="required control-label" for="start-date">Role(s):</label>
+                                            <select data-placeholder="Role(s)" multiple class="chosen-select-width" tabindex="16">
+                                                <option>Internal</option>
+                                                <option>User</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group multi-select">
+                                            <label class="required control-label" for="start-date">External ID:</label>
+                                            <select data-placeholder="External ID" multiple class="chosen-select-width" tabindex="16">
+                                                <option>1050</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button id="save" name="save" class="btn btn-primary"> Save</button>
+                                        <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+
+                        <!-- Modal Carrier Database -->
+                        <div id="carrier-database" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Carrier Database User - Assign </h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="form-group multi-select">
+                                            <label class="required control-label" for="start-date">System Role(s):</label>
+                                            <select data-placeholder="System Role(s)" multiple class="chosen-select-width" tabindex="16">
+                                                <option>Admin</option>
+                                                <option>Manager</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group multi-select">
+                                            <label class="required control-label" for="start-date">Role(s):</label>
+                                            <select data-placeholder="Role(s)" multiple class="chosen-select-width" tabindex="16">
+                                                <option>Internal</option>
+                                                <option>User</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group multi-select">
+                                            <label class="required control-label" for="start-date">External ID:</label>
+                                            <select data-placeholder="External ID" multiple class="chosen-select-width" tabindex="16">
+                                                <option>1050</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button id="save" name="save" class="btn btn-primary"> Save</button>
+                                        <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+
+                    </div>
+                    <div class="buttons-footer">
+                        <button id="cancel" name="cancel" class="btn btn-default smallBtn"> Cancel</button>
+                        <button id="save" name="save" class="pull-right btn btn-primary smallBtn"> Submit</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center copyright">
+            <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 2.3.3</p>
+        </div>
+        <script type="text/javascript" src="../js/tooltip.js"></script>
+        <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+.panel {
+    border: none
+}
+
+.view {
+	padding: 15px;
+}
+
+@media only screen and (max-width: 1279px) {
+	th {
+		display: none !important;
+	}
+
+}

@@ -1,0 +1,11 @@
+.app-table {
+   margin-left: -15px;
+}
+
+.add-user-checkbox .checkbox{
+	display: inline-block;
+	margin-right: 15px;
+}
+.add-user-checkbox .checkbox:last-child{
+	margin-right: 0;
+}

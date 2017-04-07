@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Office of America - Launch Portal</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body class="portal-pad portal-page">
+    <nav class="navbar navbar-inverse navbar-fixed-top menu-top">
+        <div class="container-fluid menu-margin">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar1" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="150" alt="Insurance Office of America">
+                </a>
+                <h4 class="company-title">Insurance Office of America</h4>
+                <h5>Launch Portal</h5>
+            </div>
+            <div id="navbar" role="navigation" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Chris Robertson <i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <div class="arrow-up"></div>
+                            <li><a href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content">
+        <div class="row sidebar-container">
+            <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
+                <ul class="nav nav-sidebar">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-desktop fa-2x" aria-hidden="true"></i><span>Applications</span>
+                        </a>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="users.html" onclick="location.href='users.html';"><i class="fa fa-users fa-2x" aria-hidden="true"></i><span> Users</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="add-user.html">Add New</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <ul class="nav nav-sidebar nav-sidebar2">
+                        <li class="dropdown">
+                            <hr>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><span> Chris Robertson</span>
+                     <i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit Profile</a>
+                                </li>
+                                <li><a href="../admin/help-request.html">Help</a>
+                                </li>
+                                <li><a href="#">Logout</a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- Body -->
+            <div class="body-container">
+
+                <div class="tablecontainer">
+                    <div class="col-md-12 col-xs-12 panel-heading tableheader">
+                        <div class="pull-left head-drop">
+                            Users
+                        </div>
+
+                        <div class="pull-right">
+                            <a href="add-user.html" class="btn portal-btn pull-right"><i class="fa fa-plus"></i> Add User</a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="portal-tables">
+                            <table class="table-hover table-striped table-condensed cf">
+                                <thead class="cf">
+
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>User Name</th>
+                                        <th>NT User Name - ioadom\</th>
+                                        <th>Registered on</th>
+                                        <th>Logged in on</th>
+                                        <th class="action">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td data-title="Name">Bell, Alexandra</td>
+                                        <td data-title="User Name"><a href="mailto:alexandra.bell@ioausa.com">alexandra.bell@ioausa.com</a></td>
+                                        <td data-title="NT User Name - ioadom\">Alexandra</td>
+                                        <td data-title="Registered on">3/2/2017</td>
+                                        <td data-title="Logged in on">3/2/2017</td>
+                                        <td data-title="Action" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-envelope"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-lock"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name">Bower, Caroline</td>
+                                        <td data-title="User Name"><a href="mailto:caroline.bower@ioausa.com">caroline.bower@ioausa.com</a></td>
+                                        <td data-title="NT User Name - ioadom\">Caroline</td>
+                                        <td data-title="Registered on">3/1/2017</td>
+                                        <td data-title="Logged in on">3/1/2017</td>
+                                        <td data-title="Action" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-envelope"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-lock"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name">Burgess, Claire</td>
+                                        <td data-title="User Name"><a href="mailto:claire.burgess@ioausa.com">claire.burgess@ioausa.com</a></td>
+                                        <td data-title="NT User Name - ioadom\">Claire</td>
+                                        <td data-title="Registered on">2/26/2017</td>
+                                        <td data-title="Logged in on">2/26/2017</td>
+                                        <td data-title="Action" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-envelope"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-lock"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name">Duncan, Ian</td>
+                                        <td data-title="User Name"><a href="mailto:ian.duncan@ioausa.com">ian.duncan@ioausa.com</a></td>
+                                        <td data-title="NT User Name - ioadom\">Ian</td>
+                                        <td data-title="Registered on">2/24/2017</td>
+                                        <td data-title="Logged in on">2/24/2017</td>
+                                        <td data-title="Action" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-envelope"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-lock"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name">Hamilton, Alexander</td>
+                                        <td data-title="User Name"><a href="mailto:alexander.hamilton@ioausa.com">alexander.hamilton@ioausa.com</a></td>
+                                        <td data-title="NT User Name - ioadom\">Alexandra</td>
+                                        <td data-title="Registered on">2/21/2017</td>
+                                        <td data-title="Logged in on">2/21/2017</td>
+                                        <td data-title="Action" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-envelope"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-lock"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name">Hill, Amelia</td>
+                                        <td data-title="User Name"><a href="mailto:amelia.hill@ioausa.com">amelia.hill@ioausa.com</a></td>
+                                        <td data-title="NT User Name - ioadom\">Amelia</td>
+                                        <td data-title="Registered on">2/20/2017</td>
+                                        <td data-title="Logged in on">2/20/2017</td>
+                                        <td data-title="Action" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-envelope"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-lock"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name">Jones, Rick</td>
+                                        <td data-title="User Name"><a href="mailto:rick.jones@ioausa.com">rick.jones@ioausa.com</a></td>
+                                        <td data-title="NT User Name - ioadom\">Rick</td>
+                                        <td data-title="Registered on">2/19/2017</td>
+                                        <td data-title="Logged in on">2/19/2017</td>
+                                        <td data-title="Action" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-envelope"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-lock"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name">Knox, Emily</td>
+                                        <td data-title="User Name"><a href="mailto:emily.knox@ioausa.com">emily.knox@ioausa.com</a></td>
+                                        <td data-title="NT User Name - ioadom\">Alexandra</td>
+                                        <td data-title="Registered on">2/17/2017</td>
+                                        <td data-title="Logged in on">2/17/2017</td>
+                                        <td data-title="Action" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-envelope"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-lock"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name">Peterson, James</td>
+                                        <td data-title="User Name"><a href="mailto:james.peterson@ioausa.com">james.peterson@ioausa.com</a></td>
+                                        <td data-title="NT User Name - ioadom\">James</td>
+                                        <td data-title="Registered on">2/17/2017</td>
+                                        <td data-title="Logged in on">2/17/2017</td>
+                                        <td data-title="Action" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-envelope"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-lock"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name">Williams, Kevin</td>
+                                        <td data-title="User Name"><a href="mailto:kevin.williams@ioausa.com">kevin.williams@ioausa.com</a></td>
+                                        <td data-title="NT User Name - ioadom\">Kevin</td>
+                                        <td data-title="Registered on">2/17/2017</td>
+                                        <td data-title="Logged in on">2/17/2017</td>
+                                        <td data-title="Action" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-envelope"></i></a>
+                                            </div>
+
+                                           <div class="btn-cell">
+                                                <a href="" class="actionGray"><i class="fa fa-lock"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">«</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a>
+                                </li>
+                                <li><a href="#">2</a>
+                                </li>
+                                <li><a href="#">3</a>
+                                </li>
+                                <li><a href="#">4</a>
+                                </li>
+                                <li><a href="#">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">»</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center copyright">
+        <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 2.3.3</p>
+    </div>
+    <script type="text/javascript" src="../js/tooltip.js"></script>
+
+</body>
+
+</html>

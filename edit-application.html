@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Office of America - Launch Portal</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/edit-application.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/add-row.js"></script>
+</head>
+
+<body class="portal-pad portal-page">
+    <nav class="navbar navbar-inverse navbar-fixed-top menu-top">
+        <div class="container-fluid menu-margin">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar1" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="150" alt="Insurance Office of America">
+                </a>
+                <h4 class="company-title">Insurance Office of America</h4>
+                <h5>Launch Portal</h5>
+            </div>
+            <div id="navbar" role="navigation" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Chris Robertson <i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <div class="arrow-up"></div>
+                            <li><a href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content">
+        <div class="row sidebar-container">
+            <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
+                <ul class="nav nav-sidebar">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-desktop fa-2x" aria-hidden="true"></i><span>Applications</span>
+                        </a>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="users.html" onclick="location.href='users.html';"><i class="fa fa-users fa-2x" aria-hidden="true"></i><span> Users</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="add-user.html">Add New</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <ul class="nav nav-sidebar nav-sidebar2">
+                        <li class="dropdown">
+                            <hr>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><span> Chris Robertson</span>
+                     <i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit Profile</a>
+                                </li>
+                                <li><a href="../admin/help-request.html">Help</a>
+                                </li>
+                                <li><a href="#">Logout</a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- Body -->
+
+            <div class="body-container">
+
+                <div class="title-header spacerbottom20">
+                    <div class="head-drop">
+                        <div class="btn-group">
+                            Edit Application - Cams
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div id="nav-tabs">
+                        <ul class="nav nav-tabs spacer20">
+                            <li class="active"><a data-toggle="tab" href="#permissions" aria-expanded="false">Permissions</a>
+                            </li>
+                            <li class="sep"><a data-toggle="tab" href="#system-roles" aria-expanded="false">System Roles</a>
+                            </li>
+                            <li class="sep"><a data-toggle="tab" href="#roles" aria-expanded="true">Roles</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content">
+                        <div id="permissions" class="tab-pane tabs-info portal-tables fade in active">
+
+                            <table class="table-hover table-striped table-condensed cf">
+                                <thead class="cf">
+                                    <caption class="view">Add New</caption>
+                                    <tr>
+                                        <th class="col-lg-2">Name(s)</th>
+                                        <th class="col-lg-2">Description(s)</th>
+                                        <th class="col-lg-1">External ID(s)</th>
+                                        <th class="col-lg-1 action">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="permision-row-container">
+                                    <tr>
+                                        <td data-title="Name(s)">
+                                            <label class="required control-label sr-only" for="">Name:</label>
+                                            <input id="name" name="name" class="form-control input-md" required="" type="text">
+                                        </td>
+                                        <td data-title="Description(s)">
+                                            <label class="required control-label sr-only" for="">Description:</label>
+                                            <input id="description" name="description" class="form-control input-md" required="" type="text">
+                                        </td>
+
+                                        <td data-title="External ID(s)">
+                                            <label class="required control-label sr-only" for="">External ID:</label>
+                                            <input id="externalid" name="externalid" class="form-control input-md" required="" type="text">
+                                        </td>
+                                        <td data-title="Action" name="action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="#" class="actionGreen"><i class="fa fa-floppy-o"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell add-row">
+                                                <a href="#" class="actionDarkBlue add-permission-row"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table-hover table-striped table-condensed cf spacer20">
+                                <thead class="cf">
+                                    <caption class="view">Entries</caption>
+                                    <tr>
+                                        <th class="col-lg-2"></th>
+                                        <th class="col-lg-2"></th>
+                                        <th class="col-lg-1"></th>
+                                        <th class="col-lg-1 action"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-title="Name(s)">Can View</td>
+                                        <td data-title="Description(s)">View claims only</td>
+                                        <td data-title="External ID(s)">1050</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name(s)">Can Process claims</td>
+                                        <td data-title="Description(s)">Process claims only</td>
+                                        <td data-title="External ID(s)">1051</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name(s)">Can Edit claims</td>
+                                        <td data-title="Description(s)">Edit claims only</td>
+                                        <td data-title="External ID(s)">1052</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name(s)">Can View</td>
+                                        <td data-title="Description(s)">View claims only</td>
+                                        <td data-title="External ID(s)">1053</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name(s)">Can View</td>
+                                        <td data-title="Description(s)">View claims only</td>
+                                        <td data-title="External ID(s)">1054</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="system-roles" class="tab-pane tabs-info portal-tables fade in">
+
+                            <table class="table-hover table-striped table-condensed cf">
+                                <thead class="cf">
+                                    <caption class="view">Add New</caption>
+                                    <tr>
+                                        <th class="col-lg-2">Name(s)</th>
+                                        <th class="col-lg-2">Description(s)</th>
+                                        <th class="col-lg-1">External ID(s)</th>
+                                        <th class="col-lg-1 action">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="system-roles-container">
+                                    <tr>
+                                        <td data-title="Name(s)">
+                                            <label class="required control-label sr-only" for="">Name:</label>
+                                            <input id="name" name="name" class="form-control input-md" required="" type="text">
+                                        </td>
+                                        <td data-title="Description(s)">
+                                            <label class="required control-label sr-only" for="">Description:</label>
+                                            <input id="description" name="description" class="form-control input-md" required="" type="text">
+                                        </td>
+                                        <td data-title="External ID(s)">
+                                            <label class="required control-label sr-only" for="">External ID:</label>
+                                            <input id="externalid" name="externalid" class="form-control input-md" required="" type="text">
+                                        </td>
+                                        <td data-title="Action" name="action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="#" class="actionGreen"><i class="fa fa-floppy-o"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell add-row">
+                                                <a href="#" class="actionDarkBlue add-row add-system-roles-row"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table-hover table-striped table-condensed cf spacer20">
+                                <thead class="cf">
+                                    <caption class="view">Entries</caption>
+                                    <tr>
+                                        <th class="col-lg-2"></th>
+                                        <th class="col-lg-2"></th>
+                                        <th class="col-lg-1"></th>
+                                        <th class="col-lg-1 action"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-title="Name(s)">Admin</td>
+                                        <td data-title="Description(s)">Admin of System</td>
+                                        <td data-title="External ID(s)">1050</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name(s)">Super User</td>
+                                        <td data-title="Description(s)">Super User sees all</td>
+                                        <td data-title="External ID(s)">1051</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name(s)">User</td>
+                                        <td data-title="Description(s)">User sees the barebones</td>
+                                        <td data-title="External ID(s)">1052</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name(s)">User</td>
+                                        <td data-title="Description(s)">User sees the barebones</td>
+                                        <td data-title="External ID(s)">1053</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name(s)">User</td>
+                                        <td data-title="Description(s)">User sees the barebones</td>
+                                        <td data-title="External ID(s)">1054</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+                        <div id="roles" class="tab-pane tabs-info portal-tables fade in">
+
+                            <table class="table-hover table-striped table-condensed cf">
+                                <thead class="cf">
+                                    <caption class="view">Add New</caption>
+                                    <tr>
+                                        <th class="col-lg-2">Name(s)</th>
+                                        <th class="col-lg-2">Description(s)</th>
+                                        <th class="col-lg-1">Permission Assigned</th>
+                                        <th class="col-lg-1">External ID(s)</th>
+                                        <th class="col-lg-1 action">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="roles-container">
+
+                                    <tr>
+                                        <td data-title="Name(s)">
+                                            <label class="required control-label sr-only" for="">Name:</label>
+                                            <input id="name" name="name" class="form-control input-md" required="" type="text">
+                                        </td>
+                                        <td data-title="Description(s)">
+                                            <label class="required control-label sr-only" for="">Description:</label>
+                                            <input id="description" name="description" class="form-control input-md" required="" type="text">
+                                        </td>
+                                        <td data-title="Permission Assigned">
+                                            <label class="required control-label sr-only" for="">Permission Assigned:</label>
+                                            <select id="permission" name="permission" class="form-control">
+                                                <option value="Visible">Visible</option>
+                                                <option value="Enable">Enable</option>
+                                            </select>
+                                        </td>
+                                        <td data-title="External ID(s)">
+                                            <label class="required control-label sr-only" for="">External ID:</label>
+                                            <input id="externalid" name="externalid" class="form-control input-md" required="" type="text">
+                                        </td>
+                                        <td data-title="Action" name="action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="#" class="actionGreen"><i class="fa fa-floppy-o"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell add-row">
+                                                <a href="#" class="actionDarkBlue add-row add-roles-row"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table-hover table-striped table-condensed cf spacer20">
+                                <thead class="cf">
+                                    <caption class="view">Entries</caption>
+                                    <tr>
+                                        <th class="col-lg-2"></th>
+                                        <th class="col-lg-2"></th>
+                                        <th class="col-lg-1"></th>
+                                        <th class="col-lg-1"></th>
+                                        <th class="col-lg-1 action"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-title="Name(s)">Can View</td>
+                                        <td data-title="Description(s)">View claims only</td>
+                                        <td data-title="Permission Assigned">Visible</td>
+                                        <td data-title="External ID(s)">1050</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name(s)">Can Process claims</td>
+                                        <td data-title="Description(s)">Process claims only</td>
+                                        <td data-title="Permission Assigned">Visible</td>
+                                        <td data-title="External ID(s)">1051</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name(s)">Can Edit claims</td>
+                                        <td data-title="Description(s)">Edit claims only</td>
+                                        <td data-title="Permission Assigned">Visible</td>
+                                        <td data-title="External ID(s)">1052</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name(s)">Can View</td>
+                                        <td data-title="Description(s)">View claims only</td>
+                                        <td data-title="Permission Assigned">Visible</td>
+                                        <td data-title="External ID(s)">1053</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Name(s)">Can View</td>
+                                        <td data-title="Description(s)">View claims only</td>
+                                        <td data-title="Permission Assigned">Visible</td>
+                                        <td data-title="External ID(s)">1054</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+
+                                            <div class="btn-cell">
+                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="buttons-footer">
+                            <button id="cancel" name="cancel" class="btn btn-default smallBtn"> Cancel</button>
+                            <button id="save" name="save" class="pull-right btn btn-primary smallBtn"> Save Changes</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="text-center copyright">
+            <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 2.3.3</p>
+        </div>
+        <script type="text/javascript" src="../js/tooltip.js"></script>
+
+</body>
+
+</html>
