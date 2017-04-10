@@ -1,2 +1,5 @@
 ## 2017-4-7
 • Created new IOA Launch Portal
+
+## 2017-4-10
+• Added check field feature on add-user.html, to display application once selected
