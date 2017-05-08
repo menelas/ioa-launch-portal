@@ -659,6 +659,14 @@ table {
    border: 1px solid #ccc;
 }
 
+.app-tables {
+   border-bottom: 1px solid #ccc !important;
+   border-top: 1px solid #ccc !important;
+   border-left: none !important;
+   border-right: none  !important;
+   border-bottom: none !important;
+}
+
 .panel {
     box-shadow: none;
     border-radius: 2px;
@@ -1023,6 +1031,12 @@ form .form-group:before, form .form-group:after {
    margin-top: 8px;
 }
 
+.form {
+    margin-bottom: 20px;
+    margin-left: -7px;
+    margin-right: 7px;
+}
+
 .checkbox input {
     margin-top: 0;
 }
@@ -1084,7 +1098,6 @@ form .form-group:before, form .form-group:after {
    margin-bottom: 1px;
    border-radius: 5px 0px 0px 0px;
 }
-
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover, .nav>li>a:focus, .nav>li>a:hover {
    background-color: #3e83b8;

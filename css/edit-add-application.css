@@ -6,6 +6,19 @@
 	padding: 15px;
 }
 
+.form {
+	margin-bottom: 20px;
+}
+
+.portal-enabled {
+	margin-left: 20px;
+}
+
+.assign-button {
+	margin-top: 13px;
+	margin-bottom: -25px;
+}
+
 @media only screen and (max-width: 1279px) {
 	th {
 		display: none !important;

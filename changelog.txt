@@ -1,5 +1,11 @@
-## 2017-4-7
-• Created new IOA Launch Portal
+## 2017-5-8
+• Updated home and edit/add application
+• Added assign permission(s) to role(s) button under permissions tab on edit-add-application.html
+• Removed saved icons under actions
+• Linked all buttons to real events such as edit and add
 
 ## 2017-4-10
 • Added check field feature on add-user.html, to display application once selected
+
+## 2017-4-7
+• Created new IOA Launch Portal

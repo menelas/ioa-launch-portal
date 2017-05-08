@@ -9,10 +9,18 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/edit-application.css">
+    <link rel="stylesheet" href="css/edit-add-application.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/add-row.js"></script>
+
+    <!-- Chosen Multi Select -->
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/style.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/prism.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/chosen.css">
+    <script type="text/javascript" src="chosen_v1.6.2/chosen.jquery.js"></script>
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/prism.js"></script>
+
 </head>
 
 <body class="portal-pad portal-page">
@@ -90,10 +98,60 @@
                 <div class="title-header spacerbottom20">
                     <div class="head-drop">
                         <div class="btn-group">
-                            Edit Application - Cams
+                            Edit Application
                         </div>
                     </div>
                 </div>
+
+                <form role="form">
+                    <fieldset>
+                        <div class="form col-sm-6 col-md-6 col-lg-2">
+                            <label class="control-label" for="">Application Name:</label>
+                            <input id="" name="" class="form-control input-md" value="Claims Portal" type="text">
+                        </div>
+
+                        <div class="form col-sm-6 col-md-6 col-lg-2">
+                            <label class="control-label" for="">Description:</label>
+                            <input id="" name="" class="form-control input-md" type="text">
+                        </div>
+
+                        <div class="form col-lg-2">
+                            <label class="control-label" for="">ExternalID:</label>
+                            <input id="" name="" class="form-control input-md" value="claimsportal" type="text">
+                        </div>
+
+                        <div class="form col-lg-2">
+                            <label class="control-label" for="">Subdomain:</label>
+                            <input id="" name="" class="form-control input-md" value="claimsportal" type="text">
+                        </div>
+
+                        <div class="form col-lg-2">
+                            <label class="control-label" for="radio-sample-0">Is Portable Enabled?</label>
+                            <div class="radio">
+                                <label for="radio-sample-0">
+                                    <input name="radio-sample" id="radio-sample-0" value="Yes" checked="checked" type="radio"> Yes
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label for="radio-sample-1">
+                                    <input name="radio-sample" id="radio-sample-1" value="No" type="radio"> No
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form col-lg-2">
+                            <label class="control-label" for="">Subdomain:</label>
+                            <input id="" name="" class="form-control input-md" value="claimsportal" type="text">
+                        </div>
+
+                        <div class="form col-lg-12">
+                            <label class="control-label" for="text-area">Terms and Condition:</label>
+                            <textarea class="form-control" id="text-area">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel justo nec elit sodales mattis. Aenean scelerisque lobortis nibh, cursus sollicitudin turpis lacinia ut. Aliquam ut lorem commodo, blandit massa malesuada, elementum lacus. Etiam fringilla elit vitae lacus aliquam dignissim. In quis risus lectus. Nulla turpis ex, ullamcorper sed ex eget, venenatis vehicula erat.</textarea>
+                        </div>
+
+
+                    </fieldset>
+                </form>
 
                 <div class="panel panel-primary">
                     <div id="nav-tabs">
@@ -110,7 +168,11 @@
                     <div class="tab-content">
                         <div id="permissions" class="tab-pane tabs-info portal-tables fade in active">
 
-                            <table class="table-hover table-striped table-condensed cf">
+                            <div class="pull-right assign-button">
+                                <a data-toggle="modal" data-target="#assign-permission" class="btn portal-btn pull-right">Assign Permission(s) to Role(s)</a>
+                            </div>
+
+                            <table class="table-hover table-striped table-condensed cf app-tables">
                                 <thead class="cf">
                                     <caption class="view">Add New</caption>
                                     <tr>
@@ -136,19 +198,17 @@
                                             <input id="externalid" name="externalid" class="form-control input-md" required="" type="text">
                                         </td>
                                         <td data-title="Actions" name="action" class="actionBtn">
-                                            <div class="btn-cell">
-                                                <a href="#" class="actionGreen"><i class="fa fa-floppy-o"></i></a>
-                                            </div>
-
                                             <div class="btn-cell add-row">
                                                 <a href="#" class="actionDarkBlue add-permission-row"><i class="fa fa-plus"></i></a>
                                             </div>
                                         </td>
                                     </tr>
                                 </tbody>
+
+
                             </table>
 
-                            <table class="table-hover table-striped table-condensed cf spacer20">
+                            <table class="table-hover table-striped table-condensed cf app-tables">
                                 <thead class="cf">
                                     <caption class="view">Entries</caption>
                                     <tr>
@@ -169,7 +229,7 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -184,7 +244,7 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -199,7 +259,7 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -214,7 +274,7 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -229,16 +289,38 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
+
                                 </tbody>
                             </table>
+
+                            <div class="text-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
                         </div>
                         <div id="system-roles" class="tab-pane tabs-info portal-tables fade in">
 
-                            <table class="table-hover table-striped table-condensed cf">
+                            <table class="table-hover table-striped table-condensed cf app-tables">
                                 <thead class="cf">
                                     <caption class="view">Add New</caption>
                                     <tr>
@@ -263,10 +345,6 @@
                                             <input id="externalid" name="externalid" class="form-control input-md" required="" type="text">
                                         </td>
                                         <td data-title="Actions" name="action" class="actionBtn">
-                                            <div class="btn-cell">
-                                                <a href="#" class="actionGreen"><i class="fa fa-floppy-o"></i></a>
-                                            </div>
-
                                             <div class="btn-cell add-row">
                                                 <a href="#" class="actionDarkBlue add-row add-system-roles-row"><i class="fa fa-plus"></i></a>
                                             </div>
@@ -275,7 +353,7 @@
                                 </tbody>
                             </table>
 
-                            <table class="table-hover table-striped table-condensed cf spacer20">
+                            <table class="table-hover table-striped table-condensed cf app-tables">
                                 <thead class="cf">
                                     <caption class="view">Entries</caption>
                                     <tr>
@@ -296,7 +374,7 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -311,7 +389,7 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -326,7 +404,7 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -341,7 +419,7 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -356,19 +434,38 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
 
+                            <div class="text-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
 
                         </div>
 
                         <div id="roles" class="tab-pane tabs-info portal-tables fade in">
 
-                            <table class="table-hover table-striped table-condensed cf">
+                            <table class="table-hover table-striped table-condensed cf app-tables">
                                 <thead class="cf">
                                     <caption class="view">Add New</caption>
                                     <tr>
@@ -402,10 +499,6 @@
                                             <input id="externalid" name="externalid" class="form-control input-md" required="" type="text">
                                         </td>
                                         <td data-title="Actions" name="action" class="actionBtn">
-                                            <div class="btn-cell">
-                                                <a href="#" class="actionGreen"><i class="fa fa-floppy-o"></i></a>
-                                            </div>
-
                                             <div class="btn-cell add-row">
                                                 <a href="#" class="actionDarkBlue add-row add-roles-row"><i class="fa fa-plus"></i></a>
                                             </div>
@@ -414,7 +507,7 @@
                                 </tbody>
                             </table>
 
-                            <table class="table-hover table-striped table-condensed cf spacer20">
+                            <table class="table-hover table-striped table-condensed cf app-tables">
                                 <thead class="cf">
                                     <caption class="view">Entries</caption>
                                     <tr>
@@ -427,8 +520,8 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td data-title="Name(s)">Can View</td>
-                                        <td data-title="Description(s)">View claims only</td>
+                                        <td data-title="Name(s)">Document Manager</td>
+                                        <td data-title="Description(s)">Document Manager</td>
                                         <td data-title="Permission Assigned">Visible</td>
                                         <td data-title="External ID(s)">1050</td>
                                         <td data-title="Actions" class="actionBtn">
@@ -437,14 +530,14 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Name(s)">Can Process claims</td>
-                                        <td data-title="Description(s)">Process claims only</td>
+                                        <td data-title="Name(s)">Client Admin</td>
+                                        <td data-title="Description(s)">Client Admin</td>
                                         <td data-title="Permission Assigned">Visible</td>
                                         <td data-title="External ID(s)">1051</td>
                                         <td data-title="Actions" class="actionBtn">
@@ -453,14 +546,14 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Name(s)">Can Edit claims</td>
-                                        <td data-title="Description(s)">Edit claims only</td>
+                                        <td data-title="Name(s)">Claims Manager</td>
+                                        <td data-title="Description(s)">Claims Manager</td>
                                         <td data-title="Permission Assigned">Visible</td>
                                         <td data-title="External ID(s)">1052</td>
                                         <td data-title="Actions" class="actionBtn">
@@ -469,14 +562,14 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Name(s)">Can View</td>
-                                        <td data-title="Description(s)">View claims only</td>
+                                        <td data-title="Name(s)">Agency Admin</td>
+                                        <td data-title="Description(s)">Agency Admin</td>
                                         <td data-title="Permission Assigned">Visible</td>
                                         <td data-title="External ID(s)">1053</td>
                                         <td data-title="Actions" class="actionBtn">
@@ -485,14 +578,14 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Name(s)">Can View</td>
-                                        <td data-title="Description(s)">View claims only</td>
+                                        <td data-title="Name(s)">Account Assistant</td>
+                                        <td data-title="Description(s)">Account Assistant</td>
                                         <td data-title="Permission Assigned">Visible</td>
                                         <td data-title="External ID(s)">1054</td>
                                         <td data-title="Actions" class="actionBtn">
@@ -501,12 +594,77 @@
                                             </div>
 
                                             <div class="btn-cell">
-                                                <a href="" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                <a data-toggle="modal" data-target="#edit-entry" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
+
+                            <div class="text-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <!-- Modal CAMS -->
+                        <div id="cams" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">CAMS User - Assign </h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="form-group multi-select">
+                                            <label class="required control-label" for="start-date">System Role(s):</label>
+                                            <select data-placeholder="System Role(s)" multiple class="chosen-select-width" tabindex="16">
+                                                <option>Admin</option>
+                                                <option>Manager</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group multi-select">
+                                            <label class="required control-label" for="start-date">Role(s):</label>
+                                            <select data-placeholder="Role(s)" multiple class="chosen-select-width" tabindex="16">
+                                                <option>Internal</option>
+                                                <option>User</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group multi-select">
+                                            <label class="required control-label" for="start-date">External ID:</label>
+                                            <select data-placeholder="External ID" multiple class="chosen-select-width" tabindex="16">
+                                                <option>1050</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button id="save" name="save" class="btn btn-primary"> Save</button>
+                                        <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="buttons-footer">
@@ -519,12 +677,190 @@
 
 
             </div>
+
+            <!-- Edit Modal -->
+            <div id="edit-entry" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Edit </h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="form-group">
+                                <label class="control-label" for="">Name:</label>
+                                <input id="" name="" class="form-control input-md" value="Can View" type="text">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label" for="">Description:</label>
+                                <input id="" name="" class="form-control input-md" value="View claims only" type="text">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label" for="">External ID(s):</label>
+                                <input id="" name="" class="form-control input-md" value="1050" type="text">
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button id="save" name="save" class="btn btn-primary"> Save</button>
+                            <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+
+            <!-- Assign Permission to Roles Modal -->
+            <div id="assign-permission" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Assign Permission(s) to Role(s) </h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="form-group multi-select">
+                                <label class="required control-label" for="start-date">Permission(s):</label>
+
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can View
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can Process Claims
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can Edit claims
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can View
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can View Claims
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can View
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can Process Claims
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can Edit claims
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can View
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can View Claims
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can View
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can Process Claims
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can Edit claims
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can View
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label for="">
+                                                <input name="" id="" value="" data-item="" type="checkbox"> Can View Claims
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group multi-select">
+                                <label class="required control-label" for="start-date">Role(s):</label>
+                                <select data-placeholder="Role(s)" multiple class="chosen-select-width" tabindex="16">
+                                    <option>Document Manager</option>
+                                    <option>Client Admin</option>
+                                    <option>Claims Manager</option>
+                                    <option>Agency Admin</option>
+                                    <option>Account Assistant</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button id="save" name="save" class="btn btn-primary"> Save</button>
+                            <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+
         </div>
 
         <div class="text-center copyright">
             <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 2.3.3</p>
         </div>
         <script type="text/javascript" src="../js/tooltip.js"></script>
+        <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
 
 </body>
 
