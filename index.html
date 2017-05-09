@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="css/app.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Toggle -->
+    <link rel="stylesheet" href="bootstrap/css/toggle/bootstrap-toggle.min.css" >
+    <script type="text/javascript" src="bootstrap/js/toggle/bootstrap-toggle.min.js"></script>
+
 </head>
 
 <body class="portal-pad portal-page">
@@ -103,6 +108,7 @@
                                         <th>Name</th>
                                         <th>External ID</th>
                                         <th>Subdomain</th>
+                                        <th>Enabled</th>
                                         <th class="action">Users</th>
                                         <th class="action">Action</th>
                                     </tr>
@@ -113,6 +119,7 @@
                                         <td data-title="Name">CAMS</td>
                                         <td data-title="External ID">CAMS</td>
                                         <td data-title="Subdomain">riskservices</td>
+                                        <td data-title="Is Enabled"><input type="checkbox" checked data-toggle="toggle" data-size="mini"></td>
                                         <td data-title="Users" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="users.html" class="actionBlue"><i class="fa fa-eye"></i> View</a>
@@ -129,6 +136,7 @@
                                         <td data-title="Name">Carrier Database Eagle</td>
                                         <td data-title="External ID">CDBEAGLE</td>
                                         <td data-title="Subdomain">cdbeagle</td>
+                                        <td data-title="Is Enabled"><input type="checkbox" checked data-toggle="toggle" data-size="mini"></td>
                                         <td data-title="Users" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="users.html" class="actionBlue"><i class="fa fa-eye"></i> View</a>
@@ -145,6 +153,7 @@
                                         <td data-title="Name">Carrier Database IOA</td>
                                         <td data-title="External ID">CDBIOA</td>
                                         <td data-title="Subdomain">cdb</td>
+                                        <td data-title="Enabled"><input type="checkbox" checked data-toggle="toggle" data-size="mini"></td>
                                         <td data-title="Users" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="users.html" class="actionBlue"><i class="fa fa-eye"></i> View</a>
@@ -158,9 +167,10 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Name">Carrier Database IOAANE</td>
-                                        <td data-title="External ID">CDBIOANNE</td>
+                                        <td data-title="Name">Carrier Database IOANE</td>
+                                        <td data-title="External ID">CDIOANE</td>
                                         <td data-title="Subdomain">cdbne</td>
+                                        <td data-title="Enabled"><input type="checkbox" checked data-toggle="toggle" data-size="mini"></td>
                                         <td data-title="Users" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="users.html" class="actionBlue"><i class="fa fa-eye"></i> View</a>
@@ -177,6 +187,7 @@
                                         <td data-title="Name">LMS</td>
                                         <td data-title="External ID">LMS</td>
                                         <td data-title="Subdomain">LMS</td>
+                                        <td data-title="Enabled"><input type="checkbox" checked data-toggle="toggle" data-size="mini"></td>
                                         <td data-title="Users" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="users.html" class="actionBlue"><i class="fa fa-eye"></i> View</a>
@@ -193,6 +204,7 @@
                                         <td data-title="Name">Operations</td>
                                         <td data-title="External ID">OPRTIONS</td>
                                         <td data-title="Subdomain">operations</td>
+                                        <td data-title="Enabled"><input type="checkbox" checked data-toggle="toggle" data-size="mini"></td>
                                         <td data-title="Users" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="users.html" class="actionBlue"><i class="fa fa-eye"></i> View</a>
@@ -209,6 +221,7 @@
                                         <td data-title="Name">People Services</td>
                                         <td data-title="External ID">PPLSRVS</td>
                                         <td data-title="Subdomain">peopleservices</td>
+                                        <td data-title="Enabled"><input type="checkbox" checked data-toggle="toggle" data-size="mini"></td>
                                         <td data-title="Users" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="users.html" class="actionBlue"><i class="fa fa-eye"></i> View</a>
@@ -225,6 +238,7 @@
                                         <td data-title="Name">RiskScore</td>
                                         <td data-title="External ID">RSKSCORE</td>
                                         <td data-title="Subdomain">riskscore</td>
+                                        <td data-title="Enabled"><input type="checkbox" checked data-toggle="toggle" data-size="mini"></td>
                                         <td data-title="Users" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="users.html" class="actionBlue"><i class="fa fa-eye"></i> View</a>
@@ -262,6 +276,14 @@
                             </ul>
                         </nav>
                     </div>
+
+                    <!-- Show only if enabled has been toggled
+                    <div class="buttons-footer">
+                        <button id="cancel" name="cancel" class="btn btn-default smallBtn"> Cancel</button>
+                        <button id="save" name="save" class="pull-right btn btn-primary smallBtn"> Save Changes</button>
+                    </div>
+                    -->
+
                 </div>
 
             </div>

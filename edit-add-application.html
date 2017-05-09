@@ -21,6 +21,10 @@
     <script type="text/javascript" src="chosen_v1.6.2/chosen.jquery.js"></script>
     <script type="text/javascript" src="chosen_v1.6.2/docsupport/prism.js"></script>
 
+    <!-- Bootstrap Toggle -->
+    <link rel="stylesheet" href="bootstrap/css/toggle/bootstrap-toggle.min.css" >
+    <script type="text/javascript" src="bootstrap/js/toggle/bootstrap-toggle.min.js"></script>
+
 </head>
 
 <body class="portal-pad portal-page">
@@ -126,17 +130,8 @@
                         </div>
 
                         <div class="form col-lg-2">
-                            <label class="control-label" for="radio-sample-0">Is Portable Enabled?</label>
-                            <div class="radio">
-                                <label for="radio-sample-0">
-                                    <input name="radio-sample" id="radio-sample-0" value="Yes" checked="checked" type="radio"> Yes
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label for="radio-sample-1">
-                                    <input name="radio-sample" id="radio-sample-1" value="No" type="radio"> No
-                                </label>
-                            </div>
+                            <label class="control-label" for="">Is Portable Enabled?</label>
+                            <input type="checkbox" checked data-toggle="toggle">
                         </div>
 
                         <div class="form col-lg-2">

@@ -19,6 +19,11 @@
 	margin-bottom: -25px;
 }
 
+.toggle.btn {
+	display: block;
+    margin-top: 7px;
+}
+
 @media only screen and (max-width: 1279px) {
 	th {
 		display: none !important;
