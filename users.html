@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="css/app.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Chosen Multi Select -->
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/style.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/prism.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/chosen.css">
+    <script type="text/javascript" src="chosen_v1.6.2/chosen.jquery.js"></script>
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/prism.js"></script>
+
 </head>
 
 <body class="portal-pad portal-page">
@@ -46,6 +54,13 @@
         <div class="row sidebar-container">
             <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
                 <ul class="nav nav-sidebar">
+                    <li>
+                        <a href="ioa-portal-with-menu.html">
+                            <i class="fa fa-desktop fa-2x" aria-hidden="true"></i><span>Dashboard</span>
+                        </a>
+                        <hr />
+                    </li>
+
                     <li>
                         <a href="index.html">
                             <i class="fa fa-desktop fa-2x" aria-hidden="true"></i><span>Applications</span>
@@ -83,6 +98,42 @@
             </div>
             <!-- Body -->
             <div class="body-container">
+                
+                <div class="row">
+                <form action="#">
+                    <div class="form-group col-lg-3">
+                        <label class="control-label" for="">User:</label><br />
+                        <select data-placeholder="Type Name" class="chosen-select-no-results" tabindex="10">
+                            <option value=""></option>
+                            <option>Bell, Alexandra</option>
+                            <option>Bower, Caroline</option>
+                            <option>Burgess, Claire</option>
+                            <option>Duncan, Ian</option>
+                            <option>Hamilton, Alexander</option>
+                            <option>Hill, Amelia</option>
+                            <option>Jones, Rick</option>
+                            <option>Knox, Emily</option>
+                          </select>
+                    </div>
+
+                    <div class="form-group col-lg-5 clear-button clearfix">
+                        <label class="control-label" for="">Application:</label>
+                        <select id="" name="" class="form-control">
+                            <option value="">Please select an application</option>
+                            <option value="">CAMS</option>
+                            <option value="">Carrier Database Eagle</option>
+                            <option value="">Carrier Database IOA</option>
+                            <option value="">Carrier Database IOANE</option>
+                            <option value="">LMS</option>
+                            <option value="">Operations</option>
+                            <option value="">People Services</option>
+                        </select>
+
+                        <button type="reset" value="reset" class="btn portal-btn default">Clear</button>
+                    </div>
+                </form>
+     
+                </div>
 
                 <div class="tablecontainer">
                     <div class="col-md-12 col-xs-12 panel-heading tableheader">
@@ -94,6 +145,7 @@
                             <a href="add-user.html" class="btn portal-btn pull-right"><i class="fa fa-plus"></i> Add User</a>
                         </div>
                     </div>
+                    
                     <div class="panel-body">
                         <div class="portal-tables">
                             <table class="table-hover table-striped table-condensed cf">
@@ -400,7 +452,7 @@
         <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 2.3.3</p>
     </div>
     <script type="text/javascript" src="../js/tooltip.js"></script>
-
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
 </body>
 
 </html>

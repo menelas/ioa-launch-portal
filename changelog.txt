@@ -1,3 +1,6 @@
+## 2017-6-9
+• Added user filter and application dropdown on users.html
+
 ## 2017-6-5
 • Created portal with menu option
 
